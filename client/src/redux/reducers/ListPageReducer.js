@@ -1,8 +1,7 @@
-import {listPageAPI, ListPageAPI} from "../../api/api";
+import {listPageAPI, test} from "../../api/api";
 
 
 const SET_LIST_DATA = "list-page/SET_LIST_DATA"
-
 
 
 let initialState = {
@@ -32,10 +31,14 @@ const setListDataAC = (data) => ({
 
 export const getListData = () => async (dispatch) => {
     try {
-        const resp = await listPageAPI.getListData()
+        const resp = await listPageAPI.getData()
         dispatch(setListDataAC(resp.data))
     } catch (e) {
         console.error(e);
     }
+}
+export const listRevers = (data) => async (dispatch) =>{
+    let dataInto = [...data]
+    dispatch(setListDataAC(dataInto.reverse()))
 }
 export default ListPageReducer

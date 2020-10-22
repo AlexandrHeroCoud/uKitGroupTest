@@ -4,15 +4,16 @@ import Grid from "@material-ui/core/Grid";
 import {Provider} from "react-redux";
 import RoutersIndex from "./routes/RoutersIndex";
 import store from "./redux/store";
+import Container from "@material-ui/core/Container";
 
 
 function App() {
   return (
-    <Grid container>
+    <Container maxWidth="sm">
       <Provider store={store}>
         <RoutersIndex />
       </Provider>
-    </Grid>
+    </Container>
   );
 }
 
