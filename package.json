@@ -2,5 +2,18 @@
   "name": "uKitGroupTest",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "json-server db.json --port 3005",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Polkanov Alexandr",
+  "email": "polkanov.freelancer@gmail.com"
 }
